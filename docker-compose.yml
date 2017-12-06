@@ -1,0 +1,12 @@
+version: '2'
+services:
+  goecommerce:
+    container_name: goecommerce
+    image: golang:1.9
+    volumes:
+      - ./:/go/src/ecommerce/
+      - ./go/src:/go/src
+    working_dir: /go/src/ecommerce/
+    ports:
+      - 9000:9000
+    tty: true
